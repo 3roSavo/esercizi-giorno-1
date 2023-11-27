@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
@@ -13,7 +15,7 @@ public class Main {
       System.out.println(numeroCaratteri);
 
 
-      // ESERCIZIO 1
+      // ESERCIZIO 1 ---------------------------------------------------------------------------------
 
         int moltiplica = mul(6, 3);
         System.out.println("risultato moltiplicazione : " + moltiplica);
@@ -21,7 +23,8 @@ public class Main {
         String concatena = conc("Mi chiamo Eros e ho ", 26, " anni");
         System.out.println(concatena);
 
-        //String[] inserisciLnArray = new String[6];
+        String[] inserisciInArray = ins(new String[] {"ciao", "mi chiamo", "eros", "perchè", "così"}, "ciaone");
+        System.out.println(Arrays.toString(inserisciInArray));
 
 
 
@@ -32,7 +35,19 @@ public class Main {
     public  static String conc(String frase1, int num, String frase2) {
         return frase1 + num + frase2;
     }
-    /*public  static String[] pushIntoArray( String[] {"string1", "string2", "string3", "string4", "string5"}, String string) {
-        return
-    }*/
+
+    public  static String[] ins(String[] stringArray, String str) {
+        String[] array = new String[6];
+            for (int i = 0; i <= stringArray.length; i++) {
+                if (i < 2) {
+                    array[i] = stringArray[i];
+                } else if (i == 2) {
+                    array[i] = str;
+                } else {
+                    array[i] = stringArray[i -1];
+                }
+            }
+        return array;
+    }
+
 }
