@@ -2,15 +2,14 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Invio with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-        // Press Maiusc+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 0; i < 6; i++) {
+      System.out.println("ciaone");
 
-            // Press Maiusc+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+      String primaVar = "Hello";
+      String secondaVar = "world";
+      String terzaVar = primaVar + secondaVar;
+      String quartaVar = terzaVar + " nice to meet you!";
+
+      int numeroCaratteri = quartaVar.length();
+      System.out.println(numeroCaratteri);
     }
 }
